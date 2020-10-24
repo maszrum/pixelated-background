@@ -18,7 +18,7 @@ export abstract class LinearGradient extends GradientBase {
         return this._angle;
     }
 
-	constructor (fromColor: Color, toColor: Color, angleDegrees: number) {
+    constructor (fromColor: Color, toColor: Color, angleDegrees: number) {
         super();
         this._fromColor = fromColor;
         this._toColor = toColor;

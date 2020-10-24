@@ -18,12 +18,12 @@ export class GlitterAnimation extends TimedAnimation {
 }
 
 declare module '../../core/pixelated-background' {
-	interface PixelatedBackground {
-		createGlitterAnimation(fadingTime?: number): GlitterAnimation;
-	}
+    interface PixelatedBackground {
+        createGlitterAnimation(fadingTime?: number): GlitterAnimation;
+    }
 }
 
 PixelatedBackground.prototype.createGlitterAnimation = 
-	function(this: PixelatedBackground, fadingTime?: number): GlitterAnimation {
+    function(this: PixelatedBackground, fadingTime?: number): GlitterAnimation {
         return new GlitterAnimation(this, fadingTime);
-	}
+    }

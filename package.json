@@ -1,23 +1,23 @@
 {
-  "name": "pixelated-background",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack",
-    "build-watch": "./node_modules/.bin/webpack --watch"
-  },
-  "author": "maszrum",
-  "license": "ISC",
-  "devDependencies": {
-    "css-loader": "^3.4.2",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "style-loader": "^1.1.3",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
-  },
-  "dependencies": {}
+    "name": "pixelated-background",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "./node_modules/.bin/webpack",
+        "build-watch": "./node_modules/.bin/webpack --watch"
+    },
+    "author": "maszrum",
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^3.4.2",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "style-loader": "^1.1.3",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.4",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    },
+    "dependencies": {}
 }

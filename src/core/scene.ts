@@ -125,12 +125,12 @@ export class Scene {
         }
     }
 
-	private startAnimation(): void {
-		if (this.animation) {
-			this.animation.stop();
-			this.animation.start(this.animationTime, () => {
+    private startAnimation(): void {
+        if (this.animation) {
+            this.animation.stop();
+            this.animation.start(this.animationTime, () => {
                 this.startAnimation();
-			});
-		}
+            });
+        }
     }
 }
