@@ -52,14 +52,37 @@ function addThirdScene(pixBg, name) {
 
     let gradient = new PixelatedBackground.SmoothLinearGradient(fromColor, toColor, angle);
     let filterGradient = new PixelatedBackground.PixelatedLinearGradient(fromColor, toColor, angle);
-    let transition = pixBg.createDiagonalAnimation(500);
+    let transition = pixBg.createGlitterAnimation(500);
     let animation = pixBg.createGlitterAnimation(3000);
     let blowFilter = new PixelatedBackground.BlowFilter(blowingFactor, filterGradient);
     
     let scene = new PixelatedBackground.Scene(name, gradient)
-        .withTransition(transition, 2000)
+        .withTransition(transition, 1000)
         .withAnimation(animation, 1000)
         .appendFilter(blowFilter);
+
+    pixBg.appendScene(scene);
+}
+
+/*
+    4th scene
+*/
+
+function addFourthScene(pixBg, name) {
+    let fromColor = new PixelatedBackground.Color(11, 104, 135);
+    let toColor = new PixelatedBackground.Color(228, 139, 152);
+    let angle = 210;
+    let noiseFactor = 0.05;
+
+    let gradient = new PixelatedBackground.PixelatedLinearGradient(fromColor, toColor, angle);
+    let transition = pixBg.createDiagonalAnimation(1000).startsAt(PixelatedBackground.DiagonalStart.TopRight);
+    let animation = pixBg.createDiagonalAnimation(1000).startsAt(PixelatedBackground.DiagonalStart.TopRight);
+    let noiseFilter = new PixelatedBackground.NoiseFilter(noiseFactor, gradient);
+
+    let scene = new PixelatedBackground.Scene(name, gradient)
+        .withTransition(transition, 2000)
+        .withAnimation(animation, 5000)
+        .appendFilter(noiseFilter);
 
     pixBg.appendScene(scene);
 }
