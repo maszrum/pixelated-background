@@ -42,7 +42,15 @@ export class PixelatedLinearGradient extends LinearGradient {
     }
 
     private initLF(): void {
+        let minus = 1;
+        if (this.angleDegrees >= 0 && this.angleDegrees <= 90) {
+            minus = -1;
+        }
+        if (this.angleDegrees >= 270 && this.angleDegrees <= 360) {
+            minus = -1;
+        }
+
         this.lfA = Math.tan(2 * Math.PI * this.angleDegrees / 360);
-        this.lfA_Denominator = Math.sqrt((this.lfA * this.lfA) + 1);
+        this.lfA_Denominator = minus * Math.sqrt((this.lfA * this.lfA) + 1);
     }
 }
