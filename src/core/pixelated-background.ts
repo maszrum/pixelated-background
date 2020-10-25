@@ -17,7 +17,11 @@ export class PixelatedBackground implements IPixelUpdater {
         this.pixelSizeConverter = BackgroundSize.init(pixelSize);
         this.pixelsController = PixelsController.init(element.id);
     }
-    
+
+    public setPixelSize(pixelSize: number): void {
+        
+    }
+
     private initializeContainer(element: HTMLElement, pixelSize: number): void {
         let topLeft = -Math.floor(pixelSize / 2) + 'px';
         element.style.top = topLeft;
