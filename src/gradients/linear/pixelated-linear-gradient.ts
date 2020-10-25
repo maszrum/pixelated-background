@@ -6,6 +6,10 @@ export class PixelatedLinearGradient extends LinearGradient {
     private lfA: number = 0;
     private lfA_Denominator: number = -1;
 
+    public isStyleOnly(): boolean {
+        return false;
+    }
+
     public getColorAt(x: number, y: number): Color {
         if (this.lfA_Denominator == -1) {
             this.initLF();
@@ -34,7 +38,7 @@ export class PixelatedLinearGradient extends LinearGradient {
     }
 
     public getStyle(): string {
-        return '';
+        return Color.createCssGradient(this.fromColor, this.toColor, this.angleDegrees);
     }
 
     public toPixelated(): IGradient {

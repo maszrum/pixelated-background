@@ -66,4 +66,11 @@ export class Color {
         
         return new Color(r, g, b);
     }
+
+    public static createCssGradient(fromColor: Color, toColor: Color, angle: number): string {
+        let angleRounded = Math.round(angle);
+        let from = fromColor.toStyleString();
+        let to = toColor.toStyleString();
+        return `linear-gradient(${angleRounded}deg, ${from}, ${to})`;
+    }
 }

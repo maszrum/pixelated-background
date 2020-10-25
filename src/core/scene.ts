@@ -116,6 +116,7 @@ export class Scene {
 
     private setStyleBackground(): void {
         let backgroundStyle = this.gradient.getStyle();
+        console.log(this.gradient);
         let bodyElement = document.getElementsByTagName('body')[0];
         if (backgroundStyle.length > 0) {
             bodyElement.style.backgroundImage = backgroundStyle;

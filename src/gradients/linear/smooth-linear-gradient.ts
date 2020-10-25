@@ -8,11 +8,12 @@ export class SmoothLinearGradient extends LinearGradient {
         return Color.transparent();
     }
 
+    public isStyleOnly(): boolean {
+        return true;
+    }
+
     public getStyle(): string {
-        let angle = Math.round(this.angleDegrees);
-        let from = this.fromColor.toStyleString();
-        let to = this.toColor.toStyleString();
-        return `linear-gradient(${angle}deg, ${from}, ${to})`;
+        return Color.createCssGradient(this.fromColor, this.toColor, this.angleDegrees);
     }
 
     public toPixelated(): IGradient {

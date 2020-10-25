@@ -8,9 +8,7 @@ export abstract class GradientBase implements IGradient {
         return BackgroundSize.instance().getSize();
     }
 
-    public isStyleOnly(): boolean {
-        return this.getStyle().length > 0;
-    }
+    public abstract isStyleOnly(): boolean;
 
     public abstract getColorAt(x: number, y: number): Color;
 
